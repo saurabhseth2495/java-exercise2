@@ -26,18 +26,6 @@ public class Movie {
     private boolean isBlockBuster;
     private boolean firstTime = true;
 
-    public Movie(int movieId, String name, String year, String language, String genre, Date releaseDate, MovieType movieType, FreeFoodDish freeFoodDish, float averageCost) {
-        this.movieId = movieId;
-        this.name = name;
-        this.year = year;
-        this.language = language;
-        this.genre = genre;
-        this.releaseDate = releaseDate;
-        this.movieType = movieType;
-        this.freeFoodDish = freeFoodDish;
-        this.averageCost = averageCost;
-    }
-
     public boolean isBlockBuster() {
         Random random = new Random();
         if (this.firstTime) {
@@ -121,5 +109,21 @@ public class Movie {
 
     public void setAverageCost(float averageCost) {
         this.averageCost = averageCost;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "movieId=" + movieId +
+                ", name='" + name + '\'' +
+                ", year='" + year + '\'' +
+                ", language='" + language + '\'' +
+                ", genre='" + genre + '\'' +
+                ", releaseDate=" + releaseDate +
+                ", movieType=" + movieType +
+                ", freeFoodDish=" + freeFoodDish +
+                ", averageCost=" + averageCost +
+                ", isBlockBuster=" + isBlockBuster +
+                '}';
     }
 }
