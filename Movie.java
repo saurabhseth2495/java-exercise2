@@ -40,15 +40,15 @@ public class Movie {
 
     public boolean isBlockBuster() {
         Random random = new Random();
-        if (firstTime) {
+        if (this.firstTime) {
             isBlockBuster = random.nextBoolean();
-            firstTime = false;
+            this.firstTime = false;
         }
         return isBlockBuster;
     }
 
     public void setBlockBuster(boolean blockBuster) {
-        isBlockBuster = blockBuster;
+        this.isBlockBuster = blockBuster;
     }
 
     public int getMovieId() {
