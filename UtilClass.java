@@ -26,18 +26,18 @@ public class UtilClass {
         return year;
     }
 
-    public static Movie movieRetriveFromDatabase(int movieId, String name, String year, String language, String genre, Date releaseDate, MovieType movieType, FreeFoodDish freeFoodDish, float averageCost, boolean isBlockBuster) {
+    public static Movie movieRetriveFromDatabase(int movieId, String name, String year, String language, String genre, Date releaseDate, MovieType movieType) {
         Movie movie = new Movie();
         movie.setMovieId(movieId);
         movie.setMovieType(movieType);
         movie.setGenre(genre);
         movie.setName(name);
-        movie.setAverageCost(averageCost);
-        movie.setFreeFoodDish(freeFoodDish);
+        movie.setAverageCost(movie.getAverageCostOfMovieType(movieType));
+        movie.setFreeFoodDish(movie.getFreeDishOfMovieType(movieType));
         movie.setLanguage(language);
         movie.setYear(year);
         movie.setReleaseDate(releaseDate);
-        movie.setBlockBuster(isBlockBuster);
+        movie.setBlockBuster(movie.isBlockBuster());
         return movie;
     }
 }

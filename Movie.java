@@ -111,6 +111,30 @@ public class Movie {
         this.averageCost = averageCost;
     }
 
+    public Float getAverageCostOfMovieType(MovieType movieType) {
+        switch (movieType) {
+            case BOLLYWOOD:
+                return 100.00f;
+            case HOLLYWOOD:
+                return 1000.00f;
+            case TOLLYWOOD:
+                return 50.00f;
+        }
+        return 0.0f;
+    }
+
+    public FreeFoodDish getFreeDishOfMovieType(MovieType movieType) {
+        switch (movieType) {
+            case BOLLYWOOD:
+                return FreeFoodDish.DALMAKHNI;
+            case HOLLYWOOD:
+                return FreeFoodDish.PAPERSTICK;
+            case TOLLYWOOD:
+                return FreeFoodDish.DOSA;
+        }
+        return FreeFoodDish.DALMAKHNI;
+    }
+
     @Override
     public String toString() {
         return "Movie{" +
