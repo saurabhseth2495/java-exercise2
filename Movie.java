@@ -26,6 +26,16 @@ public class Movie {
     private boolean isBlockBuster;
     private boolean firstTime = true;
 
+    public Movie(int movieId, String name, String year, String language, String genre, Date releaseDate, MovieType movieType) {
+        this.movieId = movieId;
+        this.name = name;
+        this.year = year;
+        this.language = language;
+        this.genre = genre;
+        this.releaseDate = releaseDate;
+        this.movieType = movieType;
+    }
+
     public boolean isBlockBuster() {
         Random random = new Random();
         if (this.firstTime) {
@@ -138,8 +148,7 @@ public class Movie {
     @Override
     public String toString() {
         return "Movie{" +
-                "movieId=" + movieId +
-                ", name='" + name + '\'' +
+                " name='" + name + '\'' +
                 ", year='" + year + '\'' +
                 ", language='" + language + '\'' +
                 ", genre='" + genre + '\'' +

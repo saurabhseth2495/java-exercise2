@@ -8,7 +8,7 @@ public class MovieDao {
 
     public List<Movie> getSpecificMovieList(MovieType movieType) {
         List<Movie> tempList = new ArrayList<>();
-        for (Movie movie : new MovieDao().getAllMovieList()) {
+        for (Movie movie : new DataBaseClass().getMovieDataFromDatabase()) {
             if (movie.getMovieType().equals(movieType)) {
                 tempList.add(movie);
             }
